@@ -6,7 +6,7 @@ using UdemyNLayerProject.Core.Models;
 
 namespace UdemyNLayerProject.Core.Repositories
 {
-    interface ICategoryRepository:IRepository<Category>
+    public interface ICategoryRepository:IRepository<Category>
     {
         Task<Category> GetWithProductsById(int categoryId);
     }
