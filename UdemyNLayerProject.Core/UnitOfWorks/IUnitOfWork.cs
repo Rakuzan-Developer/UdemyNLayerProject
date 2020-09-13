@@ -7,7 +7,7 @@ using UdemyNLayerProject.Core.Repositories;
 
 namespace UdemyNLayerProject.Core.UnitOfWorks
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
         ICategoryRepository category { get; }
         IProductRepository product { get; }
