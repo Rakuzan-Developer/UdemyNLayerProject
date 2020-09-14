@@ -33,7 +33,7 @@ namespace UdemyNLayerProject.API
             services.AddControllers();
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer(Configuration["ConnectionString:SqlConStr"].ToString(),o => {
+                options.UseSqlServer(Configuration["ConnectionStrings:SqlConStr"].ToString(),o => {
 
                     o.MigrationsAssembly("UdemyNLayerProject.Data");
 
