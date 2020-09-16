@@ -12,12 +12,12 @@ namespace UdemyNLayerProject.Core.Services
 
         Task<IEnumerable<TEntity>> GetAll();
 
-        Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate);
+        Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate);
 
         Task<TEntity> SingleOrDefault(Expression<Func<TEntity, bool>> predicate);
 
-        Task Add(TEntity entity);
-        Task AddRange(IEnumerable<TEntity> entities);
+        Task<TEntity> Add(TEntity entity);  
+        Task<IEnumerable<TEntity>> AddRange(IEnumerable<TEntity> entities);
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
         TEntity Update(TEntity entity);

@@ -12,7 +12,7 @@ namespace UdemyNLayerProject.Core.Repositories
 
         Task<IEnumerable<TEntity>> GetAll();
 
-        IEnumerable<TEntity> Where(Expression<Func<TEntity, bool>> predicate);
+        Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate);
 
         Task<TEntity> SingleOrDefault(Expression<Func<TEntity, bool>> predicate);
 
