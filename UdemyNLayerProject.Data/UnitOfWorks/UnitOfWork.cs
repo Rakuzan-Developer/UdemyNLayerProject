@@ -16,10 +16,10 @@ namespace UdemyNLayerProject.Data.UnitOfWorks
         private CategoryRepository _categoryRepository;
 
 
-        public ICategoryRepository category => _categoryRepository = _categoryRepository ?? new CategoryRepository(_context);
+        public ICategoryRepository Category => _categoryRepository = _categoryRepository ?? new CategoryRepository(_context);
          
 
-        public IProductRepository product => _productRepository = _productRepository ?? new ProductRepository(_context);
+        public IProductRepository Product => _productRepository = _productRepository ?? new ProductRepository(_context);
 
         public UnitOfWork(AppDbContext appDbContext)
         {

@@ -9,8 +9,8 @@ namespace UdemyNLayerProject.Core.UnitOfWorks
 {
     public interface IUnitOfWork
     {
-        ICategoryRepository category { get; }
-        IProductRepository product { get; }
+        ICategoryRepository Category { get; }
+        IProductRepository Product { get; }
 
         Task CommitAsnyc();
         void Commit();
