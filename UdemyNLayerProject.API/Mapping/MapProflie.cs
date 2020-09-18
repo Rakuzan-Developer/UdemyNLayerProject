@@ -15,6 +15,12 @@ namespace UdemyNLayerProject.API.Mapping
         {
             CreateMap<Category, CategoryDto>();
             CreateMap<CategoryDto, Category>();
+
+            CreateMap<Category, CategoryWithProductsDto>();
+            CreateMap<CategoryWithProductsDto, Category>();
+
+            CreateMap<Product, ProductDto>();
+            CreateMap<ProductDto, Product>();
         }
     }
 }
