@@ -44,6 +44,11 @@ namespace UdemyNLayerProject.API
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddControllers();
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
+
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:SqlConStr"].ToString(),o => {
