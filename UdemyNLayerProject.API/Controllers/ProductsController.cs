@@ -13,6 +13,7 @@ using UdemyNLayerProject.Service.Services;
 
 namespace UdemyNLayerProject.API.Controllers
 {
+    [ServiceFilter(typeof(NotFoundFilter))]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
@@ -51,7 +52,7 @@ namespace UdemyNLayerProject.API.Controllers
             return Ok(_mapper.Map<ProductWithCategoryDto>(product));
         }
 
-        [ValidationFilter]
+        
         [HttpPost]
 
         public async Task<IActionResult> Save(ProductDto productDto)
